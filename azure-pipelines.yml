@@ -20,17 +20,17 @@ steps:
   
   - task: DotNetCoreCLI@2
     inputs:
-      command: restore
+      command: 'restore'
       projects: '**./*.csproj'
 
   - task: DotNetCoreCLI@2
     inputs:
-      command: build
+      command: 'build'
       arguments: '--configuration $(buildConfiguration)'
 
   - task: DotNetCoreCLI@2
     inputs:
-      command: publish
+      command: 'publish'
       arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
