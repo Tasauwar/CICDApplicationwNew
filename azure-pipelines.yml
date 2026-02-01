@@ -31,7 +31,7 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: publish
-      arguments: '--configuration $(buildConfiguration) --output $(ArtifactStagingDirectory)'
+      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
 
