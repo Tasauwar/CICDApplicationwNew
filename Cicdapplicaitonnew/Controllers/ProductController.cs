@@ -13,12 +13,18 @@ namespace Cicdapplicaitonnew.Controllers
 
         }
 
-        [HttpGet]
+        [HttpGet("getproduct")]
         public IActionResult GetProduct()
         {
 
             return Ok("Produt list");
         }
 
+        [HttpGet("getproductbylist")]
+        public IActionResult GetProductByList()
+        {
+
+            return Ok("Produt list");
+        }
     }
 }
